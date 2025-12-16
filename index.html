@@ -3,146 +3,166 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Guia Prático do Pet Alérgico | Camila Antoniazzi</title>
-  <meta name="description" content="Guia prático e baseado em ciência para tutores de pets alérgicos. Dermatologia veterinária com foco em controle, rotina e qualidade de vida." />
+  <title>Guia Prático do Pet Alérgico | Dermatobichos</title>
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <!-- SEO -->
+  <meta name="description" content="Guia prático e científico para controle da alergia em cães. Entenda a causa da coceira, otites e falhas no tratamento. Ebook + Planner Premium." />
+  <meta name="author" content="Camila Antoniazzi – Dermatobichos" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --primary: #2f5d50;
-      --secondary: #e6f0ec;
-      --text: #1f2933;
-      --muted: #6b7280;
-      --bg: #ffffff;
-      --cta: #2f5d50;
-      --cta-hover: #244b40;
+      --primary: #2b5d5b;
+      --secondary: #f5f7f7;
+      --accent: #cfa44a;
+      --dark: #1e1e1e;
+      --gray: #6b7280;
     }
 
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
+      font-family: 'Inter', sans-serif;
     }
 
     body {
-      font-family: 'Inter', sans-serif;
-      color: var(--text);
-      background-color: var(--bg);
+      color: var(--dark);
+      background: #ffffff;
       line-height: 1.6;
+    }
+
+    section {
+      padding: 72px 20px;
     }
 
     .container {
       max-width: 980px;
       margin: 0 auto;
-      padding: 0 20px;
     }
 
-    header {
-      background: linear-gradient(135deg, #f4faf8, #ffffff);
-      padding: 80px 0 60px;
+    h1, h2, h3 {
+      line-height: 1.25;
+      margin-bottom: 20px;
     }
 
-    header h1 {
+    h1 {
       font-size: 2.4rem;
       font-weight: 700;
-      margin-bottom: 20px;
     }
 
-    header p {
-      font-size: 1.1rem;
-      color: var(--muted);
-      max-width: 720px;
-      margin-bottom: 30px;
+    h2 {
+      font-size: 2rem;
+      font-weight: 700;
     }
 
-    .btn {
-      display: inline-block;
-      background-color: var(--cta);
-      color: #fff;
-      padding: 16px 28px;
-      border-radius: 8px;
-      text-decoration: none;
+    h3 {
+      font-size: 1.3rem;
       font-weight: 600;
-      transition: background-color 0.3s ease;
     }
 
-    .btn:hover {
-      background-color: var(--cta-hover);
-    }
-
-    section {
-      padding: 70px 0;
-      border-bottom: 1px solid #f0f0f0;
-    }
-
-    section h2 {
-      font-size: 1.9rem;
-      margin-bottom: 20px;
-    }
-
-    section p {
+    p {
       margin-bottom: 16px;
-      max-width: 820px;
+      color: var(--gray);
+      font-size: 1.05rem;
     }
 
     ul {
-      margin-top: 10px;
+      margin: 20px 0;
       padding-left: 20px;
     }
 
     ul li {
       margin-bottom: 10px;
+      color: var(--gray);
+    }
+
+    .hero {
+      background: linear-gradient(180deg, #f5f7f7, #ffffff);
+      text-align: center;
+    }
+
+    .hero p {
+      font-size: 1.15rem;
     }
 
     .highlight {
-      background-color: var(--secondary);
-      padding: 30px;
-      border-radius: 12px;
+      color: var(--primary);
+      font-weight: 600;
     }
 
-    .author-box {
-      background-color: #f9fafb;
-      padding: 30px;
-      border-radius: 12px;
-    }
-
-    .author-box strong {
-      font-size: 1.1rem;
-    }
-
-    .cta-section {
-      background-color: var(--primary);
+    .cta {
+      display: inline-block;
+      margin-top: 28px;
+      padding: 16px 28px;
+      background: var(--primary);
       color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 6px;
+      transition: 0.2s ease;
+    }
+
+    .cta:hover {
+      background: #1f4746;
+    }
+
+    .section-light {
+      background: var(--secondary);
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+      margin-top: 40px;
+    }
+
+    .card {
+      background: #ffffff;
+      padding: 28px;
+      border-radius: 8px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    }
+
+    .price-box {
+      border: 2px solid var(--primary);
+      border-radius: 10px;
+      padding: 32px;
       text-align: center;
     }
 
-    .cta-section h2 {
-      color: #fff;
+    .price {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin: 16px 0;
     }
 
-    .cta-section p {
-      color: #e5f3ee;
-      max-width: 700px;
-      margin: 0 auto 30px;
+    .badge {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      margin-bottom: 12px;
     }
 
     footer {
-      padding: 40px 0;
-      font-size: 0.9rem;
-      color: var(--muted);
+      background: #111;
+      color: #bbb;
       text-align: center;
+      padding: 32px 20px;
+      font-size: 0.9rem;
     }
 
-    @media (max-width: 768px) {
-      header h1 {
-        font-size: 1.9rem;
-      }
-
-      section h2 {
-        font-size: 1.6rem;
-      }
+    footer p {
+      color: #bbb;
     }
   </style>
 </head>
@@ -150,106 +170,106 @@
 <body>
 
   <!-- HERO -->
-  <header>
+  <section class="hero">
     <div class="container">
-      <h1>Seu pet tem alergia e você não sabe mais o que fazer?</h1>
-      <p>
-        Coceira constante, feridas, otites que sempre voltam, troca de ração sem resultado e muita frustração no dia a dia.
-        <br><br>
-        <strong>Alergia não tem cura. Mas tem controle — quando feita do jeito certo.</strong>
-      </p>
-      <a href="COLE_AQUI_SEU_LINK_DA_HOTMART" class="btn">Quero acessar o guia agora</a>
-    </div>
-  </header>
+      <h1>Seu cão alérgico não precisa sofrer.<br>Ele precisa de <span class="highlight">estratégia, ciência e rotina</span>.</h1>
 
-  <!-- PARA QUEM É -->
-  <section>
-    <div class="container">
-      <h2>Para quem é este guia</h2>
-      <ul>
-        <li>Tutores de cães com coceira frequente</li>
-        <li>Pets com otites de repetição</li>
-        <li>Quem já trocou ração várias vezes sem sucesso</li>
-        <li>Pessoas cansadas de receitas caseiras e mitos da internet</li>
-        <li>Quem acredita em ciência e medicina veterinária</li>
-      </ul>
-      <p><strong>Não é para quem busca cura milagrosa.</strong></p>
+      <p>Coceira constante, feridas, otites recorrentes e frustração diária não acontecem por falta de cuidado — acontecem por falta de método.</p>
+
+      <p><strong>Alergia não tem cura.<br>Mas tem controle — quando feita do jeito certo.</strong></p>
+
+      <a href="#oferta" class="cta">Quero acessar o guia agora</a>
     </div>
   </section>
 
-  <!-- POR QUE NÃO MELHORA -->
-  <section class="highlight">
+  <!-- PROBLEMA -->
+  <section>
     <div class="container">
-      <h2>Por que a alergia do seu pet não melhora?</h2>
+      <h2>Chega de tentativa e erro</h2>
+
+      <p>A maioria dos tutores convive por anos com a alergia do pet porque:</p>
+
       <ul>
-        <li>Diagnóstico mal interpretado</li>
-        <li>Confusão entre alergia alimentar e dermatite atópica</li>
-        <li>Uso incorreto de testes alérgicos</li>
-        <li>Manejo inadequado de banho, hidratação e ambiente</li>
-        <li>Tratamentos interrompidos</li>
+        <li>O diagnóstico é incompleto ou mal interpretado</li>
+        <li>Há confusão entre alergia alimentar, dermatite atópica e DAPE</li>
+        <li>Testes alérgicos são usados de forma incorreta</li>
+        <li>O manejo diário é negligenciado</li>
+        <li>Tratamentos são interrompidos cedo demais</li>
       </ul>
-      <p><strong>A alergia exige estratégia, rotina e acompanhamento.</strong></p>
+
+      <p class="highlight">A alergia exige estratégia, rotina e acompanhamento — não improviso.</p>
     </div>
   </section>
 
-  <!-- O QUE VOCÊ VAI APRENDER -->
-  <section>
+  <!-- O QUE APRENDE -->
+  <section class="section-light">
     <div class="container">
       <h2>O que você vai aprender no guia</h2>
-      <ul>
-        <li>O que realmente é alergia em cães</li>
-        <li>Diferença entre dermatite atópica, alergia alimentar e DAPE</li>
-        <li>Por que a coceira acontece</li>
-        <li>Como funciona o eixo intestino–pele</li>
-        <li>Quando a dieta ajuda — e quando não ajuda</li>
-        <li>O papel do banho, shampoo e hidratação</li>
-        <li>Por que as otites acontecem e como controlar</li>
-        <li>Tratamentos modernos e baseados em ciência</li>
-      </ul>
+
+      <div class="cards">
+        <div class="card">O que realmente é alergia em cães</div>
+        <div class="card">Diferença entre dermatite atópica, alergia alimentar e DAPE</div>
+        <div class="card">Por que a coceira acontece</div>
+        <div class="card">Como funciona o eixo intestino–pele</div>
+        <div class="card">Quando a dieta ajuda — e quando não ajuda</div>
+        <div class="card">O papel correto do banho, shampoo e hidratação</div>
+        <div class="card">Por que as otites acontecem e como controlar</div>
+        <div class="card">Tratamentos modernos baseados em ciência</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OFERTA -->
+  <section id="oferta">
+    <div class="container">
+      <h2>Escolha como você quer cuidar do seu pet</h2>
+
+      <div class="cards">
+        <div class="price-box">
+          <h3>Versão Essencial</h3>
+          <p>Ebook completo</p>
+          <div class="price">R$ 39</div>
+          <p>Clareza, método e base científica para entender e controlar a alergia.</p>
+          <a href="LINK_HOTMART_ESSENCIAL" class="cta">Quero o ebook</a>
+        </div>
+
+        <div class="price-box">
+          <span class="badge">Mais escolhida</span>
+          <h3>Versão Premium</h3>
+          <p>Ebook + Planner Exclusivo</p>
+          <div class="price">R$ 49</div>
+          <p>Transforme conhecimento em ação diária com organização e rotina.</p>
+          <a href="LINK_HOTMART_PREMIUM" class="cta">Quero o premium</a>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- AUTORA -->
-  <section class="author-box">
+  <section class="section-light">
     <div class="container">
       <h2>Quem é a autora</h2>
-      <p>
-        <strong>Camila Antoniazzi</strong> é médica-veterinária, mestre e doutoranda em dermatologia veterinária.
-        Atua exclusivamente com casos dermatológicos, é professora de pós-graduação e fundadora da clínica
-        <strong>Dermatobichos</strong>.
-      </p>
-      <p>
-        Este guia é baseado na prática clínica real, não em achismos.
-      </p>
-    </div>
-  </section>
 
-  <!-- BONUS -->
-  <section>
-    <div class="container">
-      <h2>Bônus exclusivo – Pacote Premium</h2>
-      <p>
-        Ao adquirir o guia, você recebe também um material complementar com checklists de rotina,
-        controle de coceira e otites, planejamento de banho, hidratação, ambiente e plano de ação para crises.
-      </p>
+      <p><strong>Camila Antoniazzi</strong> é médica-veterinária, mestre e doutoranda em dermatologia veterinária.</p>
+      <p>Atua exclusivamente com casos dermatológicos, é professora de pós-graduação e fundadora da clínica <strong>Dermatobichos</strong>.</p>
+
+      <p class="highlight">Conteúdo baseado em prática clínica real — não em achismos.</p>
     </div>
   </section>
 
   <!-- CTA FINAL -->
-  <section class="cta-section">
-    <div class="container">
-      <h2>Cuide do seu pet com base na ciência</h2>
-      <p>
-        Saia do ciclo de tentativa e erro e ofereça qualidade de vida ao seu pet.
-      </p>
-      <a href="COLE_AQUI_SEU_LINK_DA_HOTMART" class="btn">Quero acessar o guia agora</a>
+  <section>
+    <div class="container" style="text-align:center">
+      <h2>Seu pet não precisa de mais tentativas</h2>
+      <p>Ele precisa de método, ciência e consistência.</p>
+      <a href="#oferta" class="cta">Acessar o guia agora</a>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer>
-    © Camila Antoniazzi – Dermatobichos<br>
-    Conteúdo educativo. Não substitui consulta veterinária.
+    <p>© Camila Antoniazzi – Dermatobichos</p>
+    <p>Conteúdo educativo. Não substitui consulta veterinária.</p>
   </footer>
 
 </body>
