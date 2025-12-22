@@ -6,7 +6,7 @@
   <title>Guia Prático do Pet Alérgico | Dermatobichos</title>
 
   <!-- SEO -->
-  <meta name="description" content="Guia prático e científico para controle da alergia em cães. Entenda a causa da coceira, otites e falhas no tratamento. Ebook + Planner Premium." />
+  <meta name="description" content="Guia prático e científico para controle da alergia em cães. Ebook + Planner Premium. Baseado em prática clínica real." />
   <meta name="author" content="Camila Antoniazzi – Dermatobichos" />
 
   <!-- Google Fonts -->
@@ -41,7 +41,7 @@
     }
 
     .container {
-      max-width: 980px;
+      max-width: 1080px;
       margin: 0 auto;
     }
 
@@ -53,6 +53,7 @@
     h1 {
       font-size: 2.4rem;
       font-weight: 700;
+      text-align: center;
     }
 
     h2 {
@@ -61,7 +62,7 @@
     }
 
     h3 {
-      font-size: 1.3rem;
+      font-size: 1.4rem;
       font-weight: 600;
     }
 
@@ -72,8 +73,8 @@
     }
 
     ul {
-      margin: 20px 0;
-      padding-left: 20px;
+      margin: 16px 0;
+      padding-left: 18px;
     }
 
     ul li {
@@ -83,10 +84,10 @@
 
     .hero {
       background: linear-gradient(180deg, #f5f7f7, #ffffff);
-      text-align: center;
     }
 
     .hero p {
+      text-align: center;
       font-size: 1.15rem;
     }
 
@@ -97,8 +98,8 @@
 
     .cta {
       display: inline-block;
-      margin-top: 28px;
-      padding: 16px 28px;
+      margin-top: 32px;
+      padding: 16px 32px;
       background: var(--primary);
       color: #fff;
       text-decoration: none;
@@ -115,29 +116,66 @@
       background: var(--secondary);
     }
 
+    /* VSL + TSL */
+    .vsl-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      margin-top: 48px;
+      align-items: center;
+    }
+
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+    }
+
+    .video-wrapper iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    @media (max-width: 900px) {
+      .vsl-grid {
+        grid-template-columns: 1fr;
+      }
+
+      h1, .hero p {
+        text-align: left;
+      }
+    }
+
+    /* Cards */
     .cards {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 24px;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 32px;
       margin-top: 40px;
     }
 
     .card {
       background: #ffffff;
-      padding: 28px;
-      border-radius: 8px;
+      padding: 32px;
+      border-radius: 10px;
       box-shadow: 0 10px 20px rgba(0,0,0,0.05);
     }
 
+    /* Oferta */
     .price-box {
       border: 2px solid var(--primary);
-      border-radius: 10px;
-      padding: 32px;
+      border-radius: 12px;
+      padding: 36px;
       text-align: center;
     }
 
     .price {
-      font-size: 2.2rem;
+      font-size: 2.3rem;
       font-weight: 700;
       color: var(--primary);
       margin: 16px 0;
@@ -147,7 +185,7 @@
       display: inline-block;
       background: var(--accent);
       color: #fff;
-      padding: 6px 12px;
+      padding: 6px 14px;
       border-radius: 999px;
       font-size: 0.8rem;
       margin-bottom: 12px;
@@ -169,10 +207,12 @@
 
 <body>
 
-  <!-- HERO -->
+  <!-- HERO / VSL -->
   <section class="hero">
     <div class="container">
-      <h1>Seu cão alérgico não precisa sofrer.<br>
+
+      <h1>
+        Seu cão alérgico não precisa sofrer.<br>
         Ele precisa de <span class="highlight">estratégia, ciência e rotina</span>.
       </h1>
 
@@ -186,63 +226,121 @@
         Mas tem controle — quando feita do jeito certo.
       </strong></p>
 
-      <!-- VIDEO -->
-      <div style="margin:40px auto;max-width:860px;">
-        <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:12px;box-shadow:0 12px 30px rgba(0,0,0,0.15);">
+      <div class="vsl-grid">
+
+        <!-- VIDEO -->
+        <div class="video-wrapper">
           <iframe
             src="https://www.youtube.com/embed/6fxkEv-Yu0k?rel=0&modestbranding=1&playsinline=1"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-            style="position:absolute;top:0;left:0;width:100%;height:100%;">
+            allowfullscreen>
           </iframe>
         </div>
+
+        <!-- TSL -->
+        <div>
+          <h3>Chega de tentativa e erro</h3>
+
+          <p>
+            A maioria dos tutores convive por <strong>anos</strong> com a alergia do pet
+            sem melhora real porque o problema não está apenas no tratamento — está na
+            forma como a alergia é compreendida e conduzida.
+          </p>
+
+          <ul>
+            <li>Diagnóstico incompleto ou mal interpretado</li>
+            <li>Confusão entre alergia alimentar, dermatite atópica e DAPE</li>
+            <li>Uso inadequado de testes alérgicos</li>
+            <li>Manejo incorreto de banho, hidratação e ambiente</li>
+            <li>Tratamentos interrompidos cedo demais</li>
+          </ul>
+
+          <p class="highlight">
+            Alergia exige estratégia, rotina e acompanhamento — não improviso.
+          </p>
+        </div>
+
       </div>
 
-      <!-- CTA HERO -->
-      <a href="https://dermatobichos-vet.hotmart.host/e-book-guia-pratico-do-pet-alergico-602bdf6c-a3e2-4e8a-b346-dde50ce5a550"
-         class="cta">
-        Quero acessar o guia agora
-      </a>
+      <div style="text-align:center">
+        <a href="https://dermatobichos-vet.hotmart.host/e-book-guia-pratico-do-pet-alergico-602bdf6c-a3e2-4e8a-b346-dde50ce5a550"
+           class="cta">
+          Quero acessar o guia agora
+        </a>
+      </div>
+
     </div>
   </section>
 
-  <!-- PROBLEMA -->
-  <section>
-    <div class="container">
-      <h2>Chega de tentativa e erro</h2>
-
-      <p>A maioria dos tutores convive por anos com a alergia do pet porque:</p>
-
-      <ul>
-        <li>O diagnóstico é incompleto ou mal interpretado</li>
-        <li>Há confusão entre alergia alimentar, dermatite atópica e DAPE</li>
-        <li>Testes alérgicos são usados de forma incorreta</li>
-        <li>O manejo diário é negligenciado</li>
-        <li>Tratamentos são interrompidos cedo demais</li>
-      </ul>
-
-      <p class="highlight">
-        A alergia exige estratégia, rotina e acompanhamento — não improviso.
-      </p>
-    </div>
-  </section>
-
-  <!-- O QUE APRENDE -->
+  <!-- O QUE VOCÊ VAI APRENDER -->
   <section class="section-light">
     <div class="container">
-      <h2>O que você vai aprender no guia</h2>
+      <h2>O que você vai aprender no Guia Prático do Pet Alérgico</h2>
 
       <div class="cards">
-        <div class="card">O que realmente é alergia em cães</div>
-        <div class="card">Diferença entre dermatite atópica, alergia alimentar e DAPE</div>
-        <div class="card">Por que a coceira acontece</div>
-        <div class="card">Como funciona o eixo intestino–pele</div>
-        <div class="card">Quando a dieta ajuda — e quando não ajuda</div>
-        <div class="card">O papel correto do banho, shampoo e hidratação</div>
-        <div class="card">Por que as otites acontecem e como controlar</div>
-        <div class="card">Tratamentos modernos baseados em ciência</div>
+
+        <div class="card">
+          <p>
+            O que realmente caracteriza a alergia em cães e por que ela é uma condição
+            crônica que exige manejo contínuo.
+          </p>
+        </div>
+
+        <div class="card">
+          <p>
+            As diferenças clínicas entre dermatite atópica, alergia alimentar e DAPE —
+            e por que confundi-las compromete todo o tratamento.
+          </p>
+        </div>
+
+        <div class="card">
+          <p>
+            Os mecanismos inflamatórios por trás da coceira persistente e das lesões
+            cutâneas.
+          </p>
+        </div>
+
+        <div class="card">
+          <p>
+            Como funciona o eixo intestino–pele e sua influência direta na resposta
+            imunológica.
+          </p>
+        </div>
+
+        <div class="card">
+          <p>
+            Em quais situações a dieta é parte da solução — e quando ela não é.
+          </p>
+        </div>
+
+        <div class="card">
+          <p>
+            O papel correto do banho terapêutico, do shampoo e da hidratação na
+            restauração da barreira cutânea.
+          </p>
+        </div>
+
+        <div class="card">
+          <p>
+            Por que as otites de repetição acontecem e como controlá-las de forma
+            consistente.
+          </p>
+        </div>
+
+        <div class="card">
+          <p>
+            Quais são os tratamentos modernos, seguros e baseados em evidência
+            científica.
+          </p>
+        </div>
+
       </div>
+
+      <p class="highlight" style="margin-top:32px">
+        Você passa a compreender o <strong>porquê</strong> do tratamento —
+        não apenas o que fazer.
+      </p>
     </div>
   </section>
 
@@ -252,17 +350,14 @@
       <h2>Escolha como você quer cuidar do seu pet</h2>
 
       <div class="cards">
+
         <div class="price-box">
           <h3>Versão Essencial</h3>
           <p>Ebook completo</p>
           <div class="price">R$ 39</div>
-          <p>
-            Clareza, método e base científica para entender e controlar a alergia.
-          </p>
+          <p>Base científica sólida para entender e controlar a alergia.</p>
           <a href="https://dermatobichos-vet.hotmart.host/e-book-guia-pratico-do-pet-alergico-602bdf6c-a3e2-4e8a-b346-dde50ce5a550"
-             class="cta">
-            Quero o ebook
-          </a>
+             class="cta">Quero o ebook</a>
         </div>
 
         <div class="price-box">
@@ -270,14 +365,11 @@
           <h3>Versão Premium</h3>
           <p>Ebook + Planner Exclusivo</p>
           <div class="price">R$ 49</div>
-          <p>
-            Transforme conhecimento em ação diária com organização e rotina.
-          </p>
+          <p>Conhecimento transformado em rotina prática.</p>
           <a href="https://dermatobichos-vet.hotmart.host/e-book-guia-pratico-do-pet-alergico-602bdf6c-a3e2-4e8a-b346-dde50ce5a550"
-             class="cta">
-            Quero o premium
-          </a>
+             class="cta">Quero o premium</a>
         </div>
+
       </div>
     </div>
   </section>
