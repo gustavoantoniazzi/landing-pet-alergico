@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
 <title>Guia Prático do Pet Alérgico | Dermatobichos</title>
 
 <meta name="description" content="Guia prático e científico para controle da alergia em cães. Ebook + Planner Premium. Criado por médica-veterinária especialista em dermatologia." />
@@ -20,7 +19,6 @@
   --gold:#c7a24d;
   --ink:#1f2933;
   --gray:#6b7280;
-  --bg:#ffffff;
   --soft:#f2f5f4;
   --border:#e5e7eb;
 }
@@ -28,52 +26,43 @@
 *{margin:0;padding:0;box-sizing:border-box}
 body{
   font-family:Inter, sans-serif;
-  background:var(--bg);
+  background:#fff;
   color:var(--ink);
-  line-height:1.75;
+  line-height:1.7;
 }
 
 section{padding:96px 24px}
-.container{max-width:1120px;margin:auto}
+.container{max-width:1200px;margin:auto}
 
 h1{
-  font-size:clamp(2.6rem,4vw,3.4rem);
+  font-size:clamp(2.4rem,4vw,3.2rem);
   font-weight:700;
   letter-spacing:-0.03em;
 }
 h2{
-  font-size:2.2rem;
+  font-size:2.1rem;
   font-weight:700;
-  letter-spacing:-0.02em;
   margin-bottom:24px;
 }
 h3{
-  font-size:1.35rem;
+  font-size:1.25rem;
   font-weight:600;
   margin-bottom:12px;
 }
 
-p{font-size:1.08rem;color:var(--gray);margin-bottom:18px}
+p{font-size:1.05rem;color:var(--gray);margin-bottom:16px}
 strong{color:var(--ink)}
-
-.hero{
-  background:linear-gradient(180deg,var(--soft),#fff);
-  text-align:center;
-}
-.hero p{max-width:780px;margin:24px auto}
-
 .highlight{color:var(--green);font-weight:600}
 
 .cta{
   display:inline-block;
-  margin-top:40px;
-  padding:18px 48px;
+  padding:16px 42px;
   background:var(--green);
   color:#fff;
   text-decoration:none;
   font-weight:600;
   border-radius:999px;
-  box-shadow:0 16px 40px rgba(0,0,0,.18);
+  box-shadow:0 14px 36px rgba(0,0,0,.18);
   transition:.25s;
 }
 .cta:hover{
@@ -81,41 +70,25 @@ strong{color:var(--ink)}
   transform:translateY(-2px);
 }
 
-.section-soft{background:var(--soft)}
-
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:36px;
-  margin-top:56px;
+/* HERO / VSL */
+.hero{
+  padding-top:64px;
+  background:linear-gradient(180deg,var(--soft),#fff);
 }
-
-.card{
-  background:#fff;
-  padding:40px;
-  border-radius:18px;
-  border:1px solid var(--border);
-  transition:.3s;
-}
-.card:hover{
-  transform:translateY(-6px);
-  box-shadow:0 24px 48px rgba(0,0,0,.08);
-}
-
-.vsl{
+.hero-grid{
   display:grid;
   grid-template-columns:1.05fr .95fr;
-  gap:64px;
+  gap:56px;
   align-items:center;
-  margin-top:72px;
 }
+.hero-copy p{max-width:560px}
 
 .video{
   position:relative;
   padding-bottom:56.25%;
-  border-radius:18px;
+  border-radius:20px;
   overflow:hidden;
-  box-shadow:0 32px 64px rgba(0,0,0,.22);
+  box-shadow:0 28px 60px rgba(0,0,0,.25);
 }
 .video iframe{
   position:absolute;
@@ -124,32 +97,67 @@ strong{color:var(--ink)}
   height:100%;
 }
 
+/* TSL bullets */
+.tsl{
+  margin-top:24px;
+}
+.tsl li{
+  list-style:none;
+  margin-bottom:14px;
+  padding-left:28px;
+  position:relative;
+  color:var(--gray);
+}
+.tsl li::before{
+  content:"✓";
+  position:absolute;
+  left:0;
+  color:var(--green);
+  font-weight:700;
+}
+
+/* SECTION VARIANTS */
+.section-soft{background:var(--soft)}
+.section-dark{
+  background:#0f172a;
+  color:#e5e7eb;
+}
+.section-dark p{color:#cbd5e1}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:36px;
+  margin-top:48px;
+}
+.card{
+  background:#fff;
+  padding:36px;
+  border-radius:18px;
+  border:1px solid var(--border);
+}
+
 /* MOCKUP */
 .mockup{
   display:flex;
   gap:32px;
   justify-content:center;
-  align-items:center;
   margin-top:48px;
 }
 .mockup img{
   width:220px;
-  border-radius:12px;
-  box-shadow:0 24px 48px rgba(0,0,0,.18);
-}
-.mockup .planner{
-  width:180px;
-  opacity:.95;
+  border-radius:14px;
+  box-shadow:0 24px 48px rgba(0,0,0,.2);
 }
 
-/* OFERTA */
+/* OFFER */
 .offer{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:48px;
-  margin-top:64px;
+  margin-top:56px;
 }
-
 .price-box{
   background:#fff;
   border-radius:22px;
@@ -157,7 +165,12 @@ strong{color:var(--ink)}
   border:2px solid var(--green);
   text-align:center;
 }
-
+.price{
+  font-size:2.6rem;
+  font-weight:700;
+  color:var(--green);
+  margin:16px 0;
+}
 .badge{
   display:inline-block;
   background:var(--gold);
@@ -165,187 +178,150 @@ strong{color:var(--ink)}
   padding:6px 18px;
   border-radius:999px;
   font-size:.85rem;
-  margin-bottom:16px;
-}
-
-.price{
-  font-size:2.8rem;
-  font-weight:700;
-  color:var(--green);
-  margin:20px 0;
+  margin-bottom:14px;
 }
 
 /* FAQ */
-.faq{
-  max-width:860px;
-  margin:auto;
-}
+.faq{max-width:900px;margin:auto}
 .faq-item{
   background:#fff;
   border:1px solid var(--border);
-  border-radius:14px;
+  border-radius:16px;
   padding:28px 32px;
   margin-bottom:18px;
 }
-.faq-item h3{
-  margin-bottom:10px;
-}
 
 /* FOOTER */
-.footer{
+footer{
   background:#0f172a;
   color:#cbd5e1;
   text-align:center;
   padding:48px 24px;
+  font-size:.9rem;
 }
-.footer p{color:#cbd5e1;font-size:.9rem}
 
+/* MOBILE */
 @media(max-width:900px){
-  .vsl,.offer{grid-template-columns:1fr}
-  .hero{text-align:left}
-  .mockup{flex-direction:column}
+  .hero-grid,.offer{grid-template-columns:1fr}
+  section{padding:72px 20px}
 }
 </style>
 </head>
 
 <body>
 
-<!-- HERO -->
+<!-- HERO VSL + TSL -->
 <section class="hero">
-  <div class="container">
-    <h1>
-      Seu cão alérgico não precisa sofrer.<br>
-      Ele precisa de <span class="highlight">ciência, estratégia e rotina</span>.
-    </h1>
-
-    <p>
-      Coceira constante, feridas e otites recorrentes não acontecem por falta de cuidado,
-      mas por falta de método.
-    </p>
-
-    <p><strong>
-      Alergia não tem cura.<br>
-      Mas tem controle — quando feita do jeito certo.
-    </strong></p>
-
-    <!-- MOCKUP -->
-    <div class="mockup">
-      <!-- Substitua as imagens abaixo pelos mockups reais -->
-      <img src="https://via.placeholder.com/400x560?text=Ebook+Guia+Prático" alt="Mockup Ebook">
-      <img class="planner" src="https://via.placeholder.com/350x480?text=Planner+Pet+Alérgico" alt="Mockup Planner">
-    </div>
-
-    <a class="cta" href="https://dermatobichos-vet.hotmart.host/e-book-guia-pratico-do-pet-alergico-602bdf6c-a3e2-4e8a-b346-dde50ce5a550">
-      Acessar o guia agora
-    </a>
-  </div>
-</section>
-
-<!-- VSL -->
-<section>
-  <div class="container vsl">
+  <div class="container hero-grid">
 
     <div class="video">
-      <iframe src="https://www.youtube.com/embed/6fxkEv-Yu0k?rel=0&modestbranding=1" allowfullscreen></iframe>
+      <iframe
+        src="https://www.youtube.com/embed/6fxkEv-Yu0k?autoplay=1&mute=1&playsinline=1&rel=0&modestbranding=1"
+        allow="autoplay; encrypted-media"
+        allowfullscreen>
+      </iframe>
     </div>
 
-    <div>
-      <h3>Chega de tentativa e erro</h3>
+    <div class="hero-copy">
+      <h1>
+        Seu cão alérgico não precisa sofrer.<br>
+        Ele precisa de <span class="highlight">ciência, estratégia e rotina</span>.
+      </h1>
+
       <p>
-        A maioria dos tutores convive por anos com a alergia do pet sem melhora real
-        porque o problema não está apenas no tratamento — está na forma como a alergia
-        é compreendida.
+        Coceira constante, feridas e otites recorrentes não acontecem por falta de cuidado,
+        mas por falta de método.
       </p>
-      <ul>
-        <li>Diagnósticos incompletos</li>
-        <li>Confusão entre tipos de alergia</li>
-        <li>Testes usados fora de contexto</li>
-        <li>Manejo incorreto da pele e do ambiente</li>
-        <li>Tratamentos interrompidos cedo demais</li>
+
+      <ul class="tsl">
+        <li>Entenda a causa real da alergia</li>
+        <li>Diferencie dermatite atópica, alergia alimentar e DAPE</li>
+        <li>Aprenda a controlar crises com constância</li>
+        <li>Transforme tratamento em rotina prática</li>
       </ul>
-      <p class="highlight">
-        Alergia exige estratégia, rotina e acompanhamento.
-      </p>
+
+      <a class="cta" href="https://dermatobichos-vet.hotmart.host/e-book-guia-pratico-do-pet-alergico-602bdf6c-a3e2-4e8a-b346-dde50ce5a550">
+        Quero acessar o guia
+      </a>
     </div>
 
   </div>
 </section>
 
-<!-- O QUE VOCÊ VAI APRENDER -->
+<!-- BLOCO DE AUTORIDADE -->
 <section class="section-soft">
   <div class="container">
-    <h2>O que você vai aprender</h2>
+    <h2>Por que este guia é diferente?</h2>
+
     <div class="grid">
-      <div class="card">O que realmente caracteriza a alergia em cães.</div>
-      <div class="card">Diferença entre dermatite atópica, alergia alimentar e DAPE.</div>
-      <div class="card">Os mecanismos inflamatórios da coceira persistente.</div>
-      <div class="card">O papel do eixo intestino–pele.</div>
-      <div class="card">Quando a dieta ajuda — e quando não.</div>
-      <div class="card">Banho, shampoo e hidratação feitos do jeito certo.</div>
-      <div class="card">Por que as otites voltam.</div>
-      <div class="card">Tratamentos modernos baseados em evidência.</div>
+      <div class="card">Criado por médica-veterinária especialista em dermatologia</div>
+      <div class="card">Baseado em prática clínica real, não em achismos</div>
+      <div class="card">Linguagem clara, sem perder rigor científico</div>
+      <div class="card">Foco em controle, não em falsas promessas</div>
+    </div>
+  </div>
+</section>
+
+<!-- MOCKUP -->
+<section>
+  <div class="container">
+    <h2>O que você recebe</h2>
+
+    <div class="mockup">
+      <img src="https://via.placeholder.com/400x560?text=Ebook+Guia+Prático" alt="Ebook">
+      <img src="https://via.placeholder.com/350x480?text=Planner+Premium" alt="Planner">
     </div>
   </div>
 </section>
 
 <!-- OFERTA -->
-<section>
+<section class="section-soft">
   <div class="container">
     <h2>Escolha como cuidar do seu pet</h2>
 
     <div class="offer">
-
       <div class="price-box">
         <h3>Versão Essencial</h3>
         <p>Ebook completo</p>
         <div class="price">R$ 39</div>
-        <p>Base científica sólida para entender e controlar a alergia.</p>
         <a class="cta" href="https://dermatobichos-vet.hotmart.host/e-book-guia-pratico-do-pet-alergico-602bdf6c-a3e2-4e8a-b346-dde50ce5a550">Quero o ebook</a>
       </div>
 
       <div class="price-box">
         <span class="badge">Mais escolhida</span>
         <h3>Versão Premium</h3>
-        <p>Ebook + Planner de Rotina</p>
+        <p>Ebook + Planner</p>
         <div class="price">R$ 49</div>
-        <p>Conhecimento transformado em prática diária.</p>
         <a class="cta" href="https://dermatobichos-vet.hotmart.host/e-book-guia-pratico-do-pet-alergico-602bdf6c-a3e2-4e8a-b346-dde50ce5a550">Quero o premium</a>
       </div>
-
     </div>
   </div>
 </section>
 
 <!-- FAQ -->
-<section class="section-soft">
+<section>
   <div class="container faq">
     <h2>Dúvidas frequentes</h2>
 
     <div class="faq-item">
-      <h3>Este guia substitui a consulta veterinária?</h3>
-      <p>Não. O guia é educativo e serve como apoio ao tratamento. O acompanhamento veterinário é indispensável.</p>
+      <h3>Isso substitui a consulta veterinária?</h3>
+      <p>Não. O guia é educativo e funciona como apoio ao tratamento.</p>
     </div>
 
     <div class="faq-item">
       <h3>Serve para qualquer tipo de alergia?</h3>
-      <p>O conteúdo aborda dermatite atópica, alergia alimentar e DAPE, explicando as diferenças e o manejo adequado de cada uma.</p>
+      <p>Sim. O conteúdo explica as diferenças entre os principais tipos e o manejo adequado.</p>
     </div>
 
     <div class="faq-item">
       <h3>O planner realmente ajuda?</h3>
-      <p>Sim. Ele transforma informação em rotina, ajudando o tutor a manter constância e identificar gatilhos.</p>
+      <p>Sim. Ele transforma informação em rotina prática.</p>
     </div>
-
-    <div class="faq-item">
-      <h3>É indicado para filhotes?</h3>
-      <p>Sim, desde que o manejo seja orientado por um veterinário.</p>
-    </div>
-
   </div>
 </section>
 
 <!-- CTA FINAL -->
-<section>
+<section class="section-dark">
   <div class="container" style="text-align:center">
     <h2>Seu pet não precisa de mais tentativas</h2>
     <p>Ele precisa de método, ciência e consistência.</p>
@@ -355,7 +331,7 @@ strong{color:var(--ink)}
   </div>
 </section>
 
-<footer class="footer">
+<footer>
   <p>© Camila Antoniazzi – Dermatobichos</p>
   <p>Conteúdo educativo. Não substitui consulta veterinária.</p>
 </footer>
